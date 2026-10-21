@@ -1,5 +1,5 @@
-site_name: ViewState Docs
-site_description: Documentação oficial do ViewState
+site_name: ViewState
+site_description: Marca e design system do ViewState
 site_author: ViewState360
 site_url: https://viewstate360.github.io/viewstate-docs/
 
@@ -7,17 +7,21 @@ repo_name: ViewState360/viewstate-docs
 repo_url: https://github.com/ViewState360/viewstate-docs
 edit_uri: edit/main/docs/
 
-copyright: Copyright &copy; ViewState360
+copyright: ViewState — Visão que transforma espaços.
 
 theme:
   name: material
   language: pt-BR
+  logo: assets/marca/simbolo-claro.png
+  favicon: assets/marca/favicon.png
   icon:
     repo: fontawesome/brands/github
+  font:
+    text: Inter
+    code: JetBrains Mono
   features:
     - navigation.instant
     - navigation.tracking
-    - navigation.tabs
     - navigation.sections
     - navigation.top
     - navigation.footer
@@ -29,29 +33,30 @@ theme:
   palette:
     - media: "(prefers-color-scheme: light)"
       scheme: default
-      primary: indigo
-      accent: indigo
+      primary: custom
+      accent: custom
       toggle:
         icon: material/weather-night
-        name: Mudar para modo escuro
+        name: Modo escuro
     - media: "(prefers-color-scheme: dark)"
       scheme: slate
-      primary: indigo
-      accent: indigo
+      primary: custom
+      accent: custom
       toggle:
         icon: material/weather-sunny
-        name: Mudar para modo claro
+        name: Modo claro
+
+extra_css:
+  - stylesheets/extra.css
 
 plugins:
   - search:
       lang: pt
 
 markdown_extensions:
-  - abbr
   - admonition
   - attr_list
   - def_list
-  - footnotes
   - md_in_html
   - tables
   - toc:
@@ -62,27 +67,24 @@ markdown_extensions:
       emoji_generator: !!python/name:material.extensions.emoji.to_svg
   - pymdownx.highlight:
       anchor_linenums: true
-      line_spans: __span
-      pygments_lang_class: true
   - pymdownx.inlinehilite
-  - pymdownx.keys
   - pymdownx.snippets
   - pymdownx.superfences
   - pymdownx.tabbed:
       alternate_style: true
-  - pymdownx.tasklist:
-      custom_checkbox: true
 
 nav:
   - Início: index.md
-  - Começando:
-      - Instalação: comecando/instalacao.md
-      - Primeiros passos: comecando/primeiros-passos.md
-  - Guias:
-      - Configuração: guias/configuracao.md
-  - Referência:
-      - API: referencia/api.md
-  - FAQ: faq.md
+  - Marca:
+      - Logo: marca/logo.md
+      - Cores: marca/cores.md
+  - Design System:
+      - Tipografia: design-system/tipografia.md
+      - Fundações: design-system/fundacoes.md
+      - Componentes: design-system/componentes.md
+      - Feedback e overlays: design-system/feedback.md
+      - Apresentação de dados: design-system/dados.md
+      - Navegação: design-system/navegacao.md
   - Contribuindo: contribuindo.md
 
 extra:

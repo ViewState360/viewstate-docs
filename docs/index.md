@@ -1,40 +1,36 @@
 # ViewState
 
-Documentação oficial do **ViewState**.
+<figure markdown>
+  ![ViewState](assets/marca/logo-vertical.png){ width="300" }
+  <figcaption>Visão que transforma espaços.</figcaption>
+</figure>
 
-!!! note "Documentação em construção"
-    Este site é o esqueleto inicial da documentação. As páginas abaixo já estão
-    publicadas e prontas para receber conteúdo.
+ViewState é uma plataforma de gestão para imobiliárias modernas: centraliza
+imóveis, contatos e oportunidades em um só lugar, com indicadores que apoiam
+decisões e relacionamento com clientes.
 
-## Por onde começar
+Esta documentação reúne a **identidade visual** e o **design system** do produto.
 
-<div class="grid cards" markdown>
+!!! info "UI Foundation v0.1 — hipótese visual"
+    O design system abaixo é a primeira hipótese visual. Serve como base de
+    trabalho e deve evoluir conforme as telas reais forem construídas.
 
--   :material-download: **[Instalação](comecando/instalacao.md)**
+## Seções
 
-    Como preparar o ambiente e instalar o ViewState.
+| Seção | O que tem lá |
+| --- | --- |
+| [Logo](marca/logo.md) | Símbolo, conceito, variações e arquivos |
+| [Cores](marca/cores.md) | Paleta da marca, neutras e semânticas |
+| [Tipografia](design-system/tipografia.md) | Escala de textos da interface |
+| [Fundações](design-system/fundacoes.md) | Espaçamento, raio, elevação, bordas e superfícies |
+| [Componentes](design-system/componentes.md) | Botões, campos, seleção, chips, avatares e ícones |
+| [Feedback e overlays](design-system/feedback.md) | Alertas, modal, drawer e estados |
+| [Apresentação de dados](design-system/dados.md) | Card, tabela e estado vazio |
+| [Navegação](design-system/navegacao.md) | Sidebar, topbar, menu mobile e responsividade |
 
--   :material-rocket-launch: **[Primeiros passos](comecando/primeiros-passos.md)**
+## Visão geral
 
-    Um fluxo mínimo, de ponta a ponta, para ver o ViewState funcionando.
-
--   :material-cog: **[Configuração](guias/configuracao.md)**
-
-    Opções disponíveis e como ajustá-las.
-
--   :material-api: **[Referência da API](referencia/api.md)**
-
-    Endpoints, parâmetros e exemplos de resposta.
-
-</div>
-
-## O que é o ViewState
-
-> Descreva aqui, em dois ou três parágrafos, o que o ViewState faz, para quem
-> ele serve e qual problema resolve.
-
-## Suporte
-
-- Dúvidas frequentes: [FAQ](faq.md)
-- Abrir uma issue: [GitHub](https://github.com/ViewState360/viewstate-docs/issues)
-- Quer ajudar? Veja [Contribuindo](contribuindo.md)
+<figure markdown>
+  ![Board completo do UI Foundation v0.1](assets/ui/00-board-completo.png)
+  <figcaption>ViewState UI Foundation v0.1 — board completo</figcaption>
+</figure>

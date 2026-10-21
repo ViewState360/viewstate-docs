@@ -1,9 +1,15 @@
 # ViewState Docs
 
-Documentação do ViewState, construída com [MkDocs](https://www.mkdocs.org/) e o
-tema [Material for MkDocs](https://squidfunk.github.io/mkdocs-material/).
+Documentação da marca e do design system do **ViewState**, construída com
+[MkDocs](https://www.mkdocs.org/) e o tema
+[Material for MkDocs](https://squidfunk.github.io/mkdocs-material/).
 
-📖 **Site publicado:** <https://viewstate360.github.io/viewstate-docs/>
+📖 **Site:** <https://viewstate360.github.io/viewstate-docs/>
+
+## Conteúdo
+
+- **Marca** — logo, conceito, variações e paleta de cores
+- **Design System** — tipografia, fundações, componentes, feedback, dados e navegação
 
 ## Rodando localmente
 
@@ -26,19 +32,15 @@ Acesse <http://127.0.0.1:8000>.
 
 ## Publicação automática
 
-Todo push na branch `main` dispara o workflow `.github/workflows/deploy.yml`,
-que faz o build e publica o site na branch `gh-pages`.
+Todo push na branch `main` dispara `.github/workflows/deploy.yml`, que publica
+o site na branch `gh-pages`.
 
-> Na primeira vez, habilite o GitHub Pages em
+> Na primeira vez, habilite em
 > **Settings → Pages → Build and deployment → Deploy from a branch → `gh-pages` / `root`**.
 
-## Estrutura
+## Cores da marca
 
-```text
-viewstate-docs/
-├── mkdocs.yml          # configuração do site e navegação
-├── requirements.txt    # dependências
-└── docs/               # conteúdo em Markdown
-```
-
-Para contribuir, veja [docs/contribuindo.md](docs/contribuindo.md).
+| Token | Hex |
+| ----- | --- |
+| Brand Ring | `#31424E` |
+| Brand Door | `#4F8A86` |
