@@ -6,27 +6,27 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
-        <meta name="description" content="Documentação oficial do ViewState">
+        <meta name="description" content="Marca e design system do ViewState">
       
       
         <meta name="author" content="ViewState360">
       
       
-        <link rel="canonical" href="https://viewstate360.github.io/viewstate-docs/referencia/api/">
+        <link rel="canonical" href="https://viewstate360.github.io/viewstate-docs/design-system/dados/">
       
       
-        <link rel="prev" href="../../guias/configuracao/">
+        <link rel="prev" href="../feedback/">
       
       
-        <link rel="next" href="../../faq/">
+        <link rel="next" href="../navegacao/">
       
       
-      <link rel="icon" href="../../assets/images/favicon.png">
+      <link rel="icon" href="../../assets/marca/favicon.png">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.45">
     
     
       
-        <title>API - ViewState Docs</title>
+        <title>Apresentação de dados - ViewState</title>
       
     
     
@@ -47,10 +47,12 @@
         
         
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
-        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter:300,300i,400,400i,700,700i%7CJetBrains+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Inter";--md-code-font:"JetBrains Mono"}</style>
       
     
+    
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
     
     <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
@@ -69,7 +71,7 @@
     
     
     
-    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="custom" data-md-color-accent="custom">
   
     
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
@@ -78,7 +80,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#referencia-da-api" class="md-skip">
+        <a href="#apresentacao-de-dados" class="md-skip">
           Pular para conteúdo
         </a>
       
@@ -90,12 +92,13 @@
     
       
 
-<header class="md-header" data-md-component="header">
-  <nav class="md-header__inner md-grid" aria-label="Cabeçalho">
-    <a href="../.." title="ViewState Docs" class="md-header__button md-logo" aria-label="ViewState Docs" data-md-component="logo">
-      
   
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Cabeçalho">
+    <a href="../.." title="ViewState" class="md-header__button md-logo" aria-label="ViewState" data-md-component="logo">
+      
+  <img src="../../assets/marca/simbolo-claro.png" alt="logo">
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
@@ -106,13 +109,13 @@
       <div class="md-header__ellipsis">
         <div class="md-header__topic">
           <span class="md-ellipsis">
-            ViewState Docs
+            ViewState
           </span>
         </div>
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              API
+              Apresentação de dados
             
           </span>
         </div>
@@ -125,9 +128,9 @@
     
     
     
-    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Mudar para modo escuro"  type="radio" name="__palette" id="__palette_0">
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="custom" data-md-color-accent="custom"  aria-label="Modo escuro"  type="radio" name="__palette" id="__palette_0">
     
-      <label class="md-header__button md-icon" title="Mudar para modo escuro" for="__palette_1" hidden>
+      <label class="md-header__button md-icon" title="Modo escuro" for="__palette_1" hidden>
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3zm3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95zm-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31"/></svg>
       </label>
     
@@ -135,9 +138,9 @@
     
     
     
-    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Mudar para modo claro"  type="radio" name="__palette" id="__palette_1">
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="custom" data-md-color-accent="custom"  aria-label="Modo claro"  type="radio" name="__palette" id="__palette_1">
     
-      <label class="md-header__button md-icon" title="Mudar para modo claro" for="__palette_0" hidden>
+      <label class="md-header__button md-icon" title="Modo claro" for="__palette_0" hidden>
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5s-1.65.15-2.39.42zM3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29zm.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14zM20.65 7l-1.77 3.79a7.02 7.02 0 0 0-2.38-4.15zm-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29zM12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44z"/></svg>
       </label>
     
@@ -211,122 +214,6 @@
       
         
           
-            
-<nav class="md-tabs" aria-label="Abas" data-md-component="tabs">
-  <div class="md-grid">
-    <ul class="md-tabs__list">
-      
-        
-  
-  
-  
-    <li class="md-tabs__item">
-      <a href="../.." class="md-tabs__link">
-        
-  
-    
-  
-  Início
-
-      </a>
-    </li>
-  
-
-      
-        
-  
-  
-  
-    
-    
-      <li class="md-tabs__item">
-        <a href="../../comecando/instalacao/" class="md-tabs__link">
-          
-  
-  Começando
-
-        </a>
-      </li>
-    
-  
-
-      
-        
-  
-  
-  
-    
-    
-      <li class="md-tabs__item">
-        <a href="../../guias/configuracao/" class="md-tabs__link">
-          
-  
-  Guias
-
-        </a>
-      </li>
-    
-  
-
-      
-        
-  
-  
-    
-  
-  
-    
-    
-      <li class="md-tabs__item md-tabs__item--active">
-        <a href="./" class="md-tabs__link">
-          
-  
-  Referência
-
-        </a>
-      </li>
-    
-  
-
-      
-        
-  
-  
-  
-    <li class="md-tabs__item">
-      <a href="../../faq/" class="md-tabs__link">
-        
-  
-    
-  
-  FAQ
-
-      </a>
-    </li>
-  
-
-      
-        
-  
-  
-  
-    <li class="md-tabs__item">
-      <a href="../../contribuindo/" class="md-tabs__link">
-        
-  
-    
-  
-  Contribuindo
-
-      </a>
-    </li>
-  
-
-      
-    </ul>
-  </div>
-</nav>
-          
         
       
       <main class="md-main" data-md-component="main">
@@ -340,18 +227,15 @@
                     
 
 
-  
 
-
-<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navegação" data-md-level="0">
+<nav class="md-nav md-nav--primary" aria-label="Navegação" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../.." title="ViewState Docs" class="md-nav__button md-logo" aria-label="ViewState Docs" data-md-component="logo">
+    <a href="../.." title="ViewState" class="md-nav__button md-logo" aria-label="ViewState" data-md-component="logo">
       
-  
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+  <img src="../../assets/marca/simbolo-claro.png" alt="logo">
 
     </a>
-    ViewState Docs
+    ViewState
   </label>
   
     <div class="md-nav__source">
@@ -398,23 +282,23 @@
     
     
       
-      
+        
         
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
       
         
         
         <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
         
           
-          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
             
   
   <span class="md-ellipsis">
-    Começando
+    Marca
   </span>
   
 
@@ -424,7 +308,7 @@
         <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_2">
             <span class="md-nav__icon md-icon"></span>
-            Começando
+            Marca
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -435,11 +319,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../../comecando/instalacao/" class="md-nav__link">
+      <a href="../../marca/logo/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    Instalação
+    Logo
   </span>
   
 
@@ -456,79 +340,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../../comecando/primeiros-passos/" class="md-nav__link">
+      <a href="../../marca/cores/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    Primeiros passos
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-          </ul>
-        </nav>
-      
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-  
-    
-    
-    
-      
-      
-        
-      
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
-        
-          
-          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
-            
-  
-  <span class="md-ellipsis">
-    Guias
-  </span>
-  
-
-            <span class="md-nav__icon md-icon"></span>
-          </label>
-        
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_3">
-            <span class="md-nav__icon md-icon"></span>
-            Guias
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../guias/configuracao/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Configuração
+    Cores
   </span>
   
 
@@ -558,9 +374,6 @@
     
       
         
-        
-      
-      
         
       
     
@@ -569,26 +382,110 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
         
           
-          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
             
   
   <span class="md-ellipsis">
-    Referência
+    Design System
   </span>
   
 
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
-          <label class="md-nav__title" for="__nav_4">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3">
             <span class="md-nav__icon md-icon"></span>
-            Referência
+            Design System
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../tipografia/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Tipografia
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../fundacoes/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Fundações
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../componentes/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Componentes
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../feedback/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Feedback e overlays
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
             
               
                 
@@ -610,7 +507,7 @@
           
   
   <span class="md-ellipsis">
-    API
+    Apresentação de dados
   </span>
   
 
@@ -621,7 +518,7 @@
         
   
   <span class="md-ellipsis">
-    API
+    Apresentação de dados
   </span>
   
 
@@ -643,51 +540,27 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#autenticacao" class="md-nav__link">
+  <a href="#card" class="md-nav__link">
     <span class="md-ellipsis">
-      Autenticação
+      Card
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#endpoints" class="md-nav__link">
+  <a href="#tabela" class="md-nav__link">
     <span class="md-ellipsis">
-      Endpoints
+      Tabela
     </span>
   </a>
-  
-    <nav class="md-nav" aria-label="Endpoints">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#get-health" class="md-nav__link">
-    <span class="md-ellipsis">
-      GET /health
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#get-recurso" class="md-nav__link">
-    <span class="md-ellipsis">
-      GET /recurso
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#codigos-de-erro" class="md-nav__link">
+  <a href="#estado-vazio" class="md-nav__link">
     <span class="md-ellipsis">
-      Códigos de erro
+      Estado vazio
     </span>
   </a>
   
@@ -702,29 +575,30 @@
 
               
             
-          </ul>
-        </nav>
-      
-    </li>
-  
-
-    
-      
-      
+              
+                
   
   
   
   
     <li class="md-nav__item">
-      <a href="../../faq/" class="md-nav__link">
+      <a href="../navegacao/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    FAQ
+    Navegação
   </span>
   
 
       </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
     </li>
   
 
@@ -776,51 +650,27 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#autenticacao" class="md-nav__link">
+  <a href="#card" class="md-nav__link">
     <span class="md-ellipsis">
-      Autenticação
+      Card
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#endpoints" class="md-nav__link">
+  <a href="#tabela" class="md-nav__link">
     <span class="md-ellipsis">
-      Endpoints
+      Tabela
     </span>
   </a>
-  
-    <nav class="md-nav" aria-label="Endpoints">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#get-health" class="md-nav__link">
-    <span class="md-ellipsis">
-      GET /health
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#get-recurso" class="md-nav__link">
-    <span class="md-ellipsis">
-      GET /recurso
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#codigos-de-erro" class="md-nav__link">
+  <a href="#estado-vazio" class="md-nav__link">
     <span class="md-ellipsis">
-      Códigos de erro
+      Estado vazio
     </span>
   </a>
   
@@ -841,7 +691,7 @@
                   
 
   
-    <a href="https://github.com/ViewState360/viewstate-docs/edit/main/docs/referencia/api.md" title="Editar esta página" class="md-content__button md-icon">
+    <a href="https://github.com/ViewState360/viewstate-docs/edit/main/docs/design-system/dados.md" title="Editar esta página" class="md-content__button md-icon">
       
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4zm10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1z"/></svg>
     </a>
@@ -849,76 +699,58 @@
   
 
 
-<h1 id="referencia-da-api">Referência da API<a class="headerlink" href="#referencia-da-api" title="Permanent link">&para;</a></h1>
-<p><strong>URL base:</strong> <code>https://exemplo.viewstate.app/v1</code></p>
-<h2 id="autenticacao">Autenticação<a class="headerlink" href="#autenticacao" title="Permanent link">&para;</a></h2>
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>curl<span class="w"> </span>-H<span class="w"> </span><span class="s2">"Authorization: Bearer </span><span class="nv">$TOKEN</span><span class="s2">"</span><span class="w"> </span><span class="se">\</span>
-</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="w">  </span>https://exemplo.viewstate.app/v1/health
-</span></code></pre></div>
-<h2 id="endpoints">Endpoints<a class="headerlink" href="#endpoints" title="Permanent link">&para;</a></h2>
-<h3 id="get-health"><code>GET /health</code><a class="headerlink" href="#get-health" title="Permanent link">&para;</a></h3>
-<p>Verifica se o serviço está no ar.</p>
-<p><strong>Resposta <code>200</code></strong></p>
-<div class="language-json highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="p">{</span>
-</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="w">  </span><span class="nt">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ok"</span>
-</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="p">}</span>
-</span></code></pre></div>
-<h3 id="get-recurso"><code>GET /recurso</code><a class="headerlink" href="#get-recurso" title="Permanent link">&para;</a></h3>
-<blockquote>
-<p>Documente parâmetros, corpo da requisição e respostas de cada endpoint.</p>
-</blockquote>
-<p><strong>Parâmetros</strong></p>
+<h1 id="apresentacao-de-dados">Apresentação de dados<a class="headerlink" href="#apresentacao-de-dados" title="Permanent link">&para;</a></h1>
+<h2 id="card">Card<a class="headerlink" href="#card" title="Permanent link">&para;</a></h2>
+<p>Para visualização de imóveis. De cima para baixo: imagem com botão de favoritar,
+chip de status, título, endereço, atributos (área, quartos, banheiros, vagas),
+preço em destaque e botão de ação.</p>
+<h2 id="tabela">Tabela<a class="headerlink" href="#tabela" title="Permanent link">&para;</a></h2>
+<p>Para listas longas e comparação. Cabeçalho em <strong>Label</strong>, fundo <code>#FAFCFD</code>.</p>
 <table>
 <thead>
 <tr>
-<th>Nome</th>
-<th>Em</th>
-<th>Tipo</th>
-<th>Obrigatório</th>
-<th>Descrição</th>
+<th>Coluna</th>
+<th>Conteúdo</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>—</td>
-<td>—</td>
-<td>—</td>
-<td>—</td>
-<td>—</td>
+<td>Código</td>
+<td>Identificador do imóvel (ex.: <code>IV-2045</code>)</td>
+</tr>
+<tr>
+<td>Imóvel</td>
+<td>Nome ou descrição curta</td>
+</tr>
+<tr>
+<td>Finalidade</td>
+<td>Venda ou Locação</td>
+</tr>
+<tr>
+<td>Status</td>
+<td>Chip colorido</td>
+</tr>
+<tr>
+<td>Corretor</td>
+<td>Responsável</td>
+</tr>
+<tr>
+<td>Atualização</td>
+<td>Data da última alteração</td>
 </tr>
 </tbody>
 </table>
-<h2 id="codigos-de-erro">Códigos de erro<a class="headerlink" href="#codigos-de-erro" title="Permanent link">&para;</a></h2>
-<table>
-<thead>
-<tr>
-<th>Código</th>
-<th>Significado</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>400</code></td>
-<td>Requisição inválida</td>
-</tr>
-<tr>
-<td><code>401</code></td>
-<td>Não autenticado</td>
-</tr>
-<tr>
-<td><code>403</code></td>
-<td>Sem permissão</td>
-</tr>
-<tr>
-<td><code>404</code></td>
-<td>Não encontrado</td>
-</tr>
-<tr>
-<td><code>500</code></td>
-<td>Erro interno</td>
-</tr>
-</tbody>
-</table>
+<p>Rodapé com total de resultados, paginação e seletor de itens por página.</p>
+<h2 id="estado-vazio">Estado vazio<a class="headerlink" href="#estado-vazio" title="Permanent link">&para;</a></h2>
+<p>Sempre que uma lista volta sem resultados: ilustração discreta, título
+(<em>"Nenhum imóvel encontrado"</em>), uma linha de orientação e um botão com a saída
+mais provável (<em>"Novo imóvel"</em>).</p>
+<p>Estado vazio nunca é uma tela em branco.</p>
+<figure>
+<p><img alt="Apresentação de dados" src="../../assets/ui/06-apresentacao-dados.png" />
+  </p>
+<figcaption>Card, tabela e estado vazio</figcaption>
+</figure>
 
 
 
@@ -954,7 +786,7 @@
       <nav class="md-footer__inner md-grid" aria-label="Rodapé" >
         
           
-          <a href="../../guias/configuracao/" class="md-footer__link md-footer__link--prev" aria-label="Anterior: Configuração">
+          <a href="../feedback/" class="md-footer__link md-footer__link--prev" aria-label="Anterior: Feedback e overlays">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
@@ -964,20 +796,20 @@
                 Anterior
               </span>
               <div class="md-ellipsis">
-                Configuração
+                Feedback e overlays
               </div>
             </div>
           </a>
         
         
           
-          <a href="../../faq/" class="md-footer__link md-footer__link--next" aria-label="Próximo: FAQ">
+          <a href="../navegacao/" class="md-footer__link md-footer__link--next" aria-label="Próximo: Navegação">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Próximo
               </span>
               <div class="md-ellipsis">
-                FAQ
+                Navegação
               </div>
             </div>
             <div class="md-footer__button md-icon">
@@ -994,7 +826,7 @@
       <div class="md-copyright">
   
     <div class="md-copyright__highlight">
-      Copyright &copy; ViewState360
+      ViewState — Visão que transforma espaços.
     </div>
   
   
@@ -1027,7 +859,7 @@
     </div>
     
     
-    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.instant", "navigation.tracking", "navigation.tabs", "navigation.sections", "navigation.top", "navigation.footer", "search.suggest", "search.highlight", "content.code.copy", "content.action.edit", "toc.follow"], "search": "../../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copiado para \u00e1rea de transfer\u00eancia", "clipboard.copy": "Copiar para \u00e1rea de transfer\u00eancia", "search.result.more.one": "mais 1 nesta p\u00e1gina", "search.result.more.other": "# mais nesta p\u00e1gina", "search.result.none": "Nenhum documento encontrado", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Digite para iniciar a busca", "search.result.term.missing": "Ausente", "select.version": "Selecione a vers\u00e3o"}}</script>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.instant", "navigation.tracking", "navigation.sections", "navigation.top", "navigation.footer", "search.suggest", "search.highlight", "content.code.copy", "content.action.edit", "toc.follow"], "search": "../../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copiado para \u00e1rea de transfer\u00eancia", "clipboard.copy": "Copiar para \u00e1rea de transfer\u00eancia", "search.result.more.one": "mais 1 nesta p\u00e1gina", "search.result.more.other": "# mais nesta p\u00e1gina", "search.result.none": "Nenhum documento encontrado", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Digite para iniciar a busca", "search.result.term.missing": "Ausente", "select.version": "Selecione a vers\u00e3o"}}</script>
     
     
       <script src="../../assets/javascripts/bundle.83f73b43.min.js"></script>

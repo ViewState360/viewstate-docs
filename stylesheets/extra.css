@@ -1,0 +1,117 @@
+/* ==========================================================================
+   ViewState — tokens de marca
+   ========================================================================== */
+
+:root {
+  /* Marca */
+  --vs-ring:   #31424E;
+  --vs-door:   #4F8A86;
+
+  /* Neutras */
+  --vs-background:     #F6F8FA;
+  --vs-surface:        #FFFFFF;
+  --vs-elevated:       #FAFCFD;
+  --vs-border:         #E4E7EB;
+  --vs-text-primary:   #1F2933;
+  --vs-text-secondary: #64748B;
+  --vs-muted:          #94A3B8;
+
+  /* Semânticas */
+  --vs-sucesso: #16A34A;
+  --vs-aviso:   #F59E0B;
+  --vs-erro:    #DC2626;
+  --vs-info:    #2563EB;
+}
+
+/* Material: cores primária e de destaque */
+[data-md-color-primary="custom"] {
+  --md-primary-fg-color:        var(--vs-ring);
+  --md-primary-fg-color--light: #46596A;
+  --md-primary-fg-color--dark:  #24323C;
+  --md-primary-bg-color:        #FFFFFF;
+}
+
+[data-md-color-accent="custom"] {
+  --md-accent-fg-color: var(--vs-door);
+}
+
+/* Tema claro */
+[data-md-color-scheme="default"] {
+  --md-default-bg-color:   var(--vs-background);
+  --md-default-fg-color:   var(--vs-text-primary);
+  --md-typeset-color:      var(--vs-text-primary);
+  --md-typeset-a-color:    var(--vs-door);
+  --md-code-bg-color:      var(--vs-elevated);
+}
+
+[data-md-color-scheme="default"] .md-typeset table:not([class]) th {
+  background: var(--vs-elevated);
+  color: var(--vs-text-primary);
+}
+
+/* Tema escuro */
+[data-md-color-scheme="slate"] {
+  --md-typeset-a-color: #7FB8B3;
+}
+
+/* ==========================================================================
+   Amostras de cor
+   ========================================================================== */
+
+.vs-paleta {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(9rem, 1fr));
+  gap: 0.75rem;
+  margin: 1rem 0;
+}
+
+.vs-cor {
+  border: 1px solid var(--vs-border);
+  border-radius: 8px;
+  overflow: hidden;
+  font-size: 0.72rem;
+  line-height: 1.4;
+}
+
+.vs-cor i {
+  display: block;
+  height: 3.5rem;
+}
+
+.vs-cor b,
+.vs-cor code {
+  display: block;
+  padding: 0 0.6rem;
+}
+
+.vs-cor b {
+  padding-top: 0.5rem;
+  font-weight: 600;
+}
+
+.vs-cor code {
+  padding-bottom: 0.5rem;
+  background: none;
+  color: var(--md-default-fg-color--light);
+  font-size: 0.72rem;
+}
+
+/* ==========================================================================
+   Figuras do design system
+   ========================================================================== */
+
+.md-typeset figure img {
+  border: 1px solid var(--vs-border);
+  border-radius: 12px;
+}
+
+.md-typeset figure figcaption {
+  color: var(--md-default-fg-color--light);
+  font-size: 0.75rem;
+}
+
+/* Logo do cabeçalho com um pouco mais de presença */
+.md-header__button.md-logo img {
+  height: 1.6rem;
+  width: auto;
+}
